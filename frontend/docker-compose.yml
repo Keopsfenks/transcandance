@@ -1,0 +1,9 @@
+services:
+  my_nginx:
+    container_name: frontend
+    image: nginx:latest
+    volumes:
+      - ./:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"

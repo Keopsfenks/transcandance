@@ -1,0 +1,85 @@
+/* Ortak stil */
+#content-container {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.nav-btn {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: none;
+    padding: 1rem 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    flex-grow: 0;
+}
+
+.nav-btn:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-btn.active {
+    color: #0aa989; /* Yeşil yazı rengi */
+}
+
+/* Altında çizgi olan buton */
+.nav-btn::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.363);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-btn.active::after {
+    transform: scaleX(1);
+    background-color: #0aa989;
+    color: #0aa989;
+}
+
+/* Bootstrap ile tablolar için ekstra düzenlemeler */
+.friends {
+    max-width: 65vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.friend-search {
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    border-bottom: #0aa989 2px solid;
+    padding: .5em;
+    font-size: 1em;
+    color: white;    
+}
+
+.friend-search:focus {
+    outline: none;
+}
+
+.friends .table-p {
+    margin-left: 1em;
+}
+
+.friends .table-button-element {
+    padding: 0;
+}
+
+/* 'Online' veya 'Offline' veri için özelleştirme */
+.friends td[data-status="Online"] {
+    color: rgb(88, 192, 148);
+    font-weight: bold;
+}
+
+.friends td[data-status="Offline"] {
+    color: rgb(228, 92, 92);
+    font-weight: bold;
+}

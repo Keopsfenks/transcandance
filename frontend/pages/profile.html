@@ -1,0 +1,44 @@
+<div class="profile-container">
+    <div class="profile-header">
+        <img src="" alt="Profile Picture" class="profile-picture" id="my-picture">
+        <h4 id="my-firstandlastname"></h4>
+        <h5 id="my-username"></h5>
+        <div class="d-flex flex-column align-items-center">
+            <button class="cool-btn" onclick="toggleEdit(true)" style="width: 100%; max-width: 28vh; margin-bottom: 0;" data-lang="profile-edit">Edit</button>
+            <button id="logoutButton" onclick="logout()" class="cool-btn" style="width: 100%; max-width: 28vh; background-color: rgb(228, 92, 92);" data-lang="logoutButton"> Logout</button>
+        </div>
+        <div class="friend-add-area mt-4 d-flex flex-column align-items-center">
+            <input type="text" id="friendUsername" data-lang="friendUsername" placeholder="Enter friend's username" class="form-control mb-2" style="max-width: 28vh;">
+            <button class="cool-btn" onclick="addFriend()" style="width: 100%; max-width: 28vh;" data-lang="profil-add-friend">Add Friend</button>
+        </div>
+    </div>
+    <div class="profile-info">
+        <table>
+            <tr>
+                <th data-lang="profile-game-name">Game Name</th>  
+                <td class="gamename" id="my-gamename"></td>
+            </tr>
+            <tr>
+                <th data-lang="profile-name">Name</th>
+                <td class="name" id="my-firstname"></td>
+            </tr>
+            <tr>
+                <th data-lang="profile-surname">Surname</th>
+                <td class="surname" id="my-lastname"></td>
+            </tr>
+            <tr>
+                <th data-lang="profile-level">Level</th>
+                <td class="level" id="my-level"></td>
+            </tr>
+            <tr>
+                <th data-lang="profile-grade">Grade</th>
+                <td class="grade" id="my-grade"></td>
+            </tr>
+            <tr>
+                <th data-lang="profile-campus">Campus</th>
+                <td class="campus" id="my-campus"></td>
+            </tr>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+
+    {% if is_authenticated %}
+        <p>Hello, {{ username }}!</p>
+        <a href="{% url 'myauth:logout' %}">
+            <button>Logout</button>
+        </a>
+    {% else %}
+        <a href="{% url 'myauth:login' %}">
+            <button>Login with 42</button>
+        </a>
+    {% endif %}
+
+</body>
+</html>

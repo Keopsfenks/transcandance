@@ -1,0 +1,219 @@
+/* CHAT CSS */
+.right-panel .chat-panel {
+  height: 64vh;
+  width: 30vw;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.right-panel .chat-container {
+	height: 64vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-end;
+	background-color: rgba(16, 15, 15, 0.901);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.chat-scroll {
+  max-height: 56vh;
+  word-wrap: break-word;
+}
+
+.chat-log {
+  flex: 1;
+  overflow-y: auto;
+  flex-direction: column;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  max-height: 56vh;
+}
+
+.input-container {
+	display: flex;
+  padding-right: 10px;
+  align-items: center;
+  padding-left: 10px;
+	border-radius: 10px;
+	background-color: #131b2771;
+}
+
+#message-input {
+  	flex: 1;
+	padding: 5px;
+	border-radius: 5px;
+  	width: 10vw;
+	border: none;
+	resize: vertical;
+	height: 4vh;
+  resize: none;
+}
+
+#send-button {
+	border-radius: 5px;
+	border: none;
+	margin-left: 10px;
+  width: auto;
+  min-width: 3vw;
+  padding: 0; 
+  height: 4vh;
+	cursor: pointer;
+}
+
+/* CHAT BARI ÖZELLEŞTİRME */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+/* Chat Select */
+.match-chat-container {
+  position: relative;
+}
+
+.match-general-chat-btn {
+  cursor: pointer;
+  height: 6vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #11151A;
+  transition: background-color 0.3s ease;
+  outline-style: solid;
+  outline-color: #4b4b4b83;
+}
+
+.match-general-chat-btn:hover {
+  background-color: #1b2027; /* Lightened on hover */
+}
+
+.match-dropdown-menu {
+  position: absolute;
+  top: 0px;
+  left: -17.5vw;
+  width: 17vw;
+  background-color: #11151A;
+  outline-style: solid;
+  outline-color: #4b4b4b83;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.match-chat-container .dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  color: #929292;
+}
+
+.match-dropdown-menu .li {
+  max-height: 5vh;
+}
+
+.dropdown-arrow {
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #929292;
+}
+
+.dropdown-arrow i {
+  font-size: 34px;
+}
+
+.dropdown-chat-name {
+  margin-bottom: 5px;
+  color: #929292;
+  font-size: calc(var(--base-font-size) + 3px);
+}
+
+.chat-img-general {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+
+.match-dropdown-menu .chat-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  flex-shrink: 0;
+}
+
+.match-dropdown-item .dropdown-item:active {
+  background-color: transparent !important;
+  color: white;
+  pointer-events: none;
+}
+
+.match-dropdown-item a {
+  color: #929292;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: calc(var(--base-font-size) + 1px);
+}
+
+.match-dropdown-item inactive {
+  color: white;
+}
+
+.match-dropdown-item:hover a {
+  color: rgb(255, 255, 255);
+}
+
+.match-dropdown-item a:hover {
+  color: white;
+}
+
+.match-dropdown-item {
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.match-dropdown-item:hover {
+  background-color: #23282e;
+}
+
+.match-dropdown-item:active {
+  background-color: #1b2027;
+}
+
+.inactive {
+  background-color: #23282e;
+}

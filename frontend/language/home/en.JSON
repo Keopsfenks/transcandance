@@ -1,0 +1,12 @@
+{
+    "homeBTN": "Home",
+    "leaderboardBTN": "Leaderboard",
+    "statisticsBTN" : "Statistics",
+    "friendsBTN": "Friends",
+    "profileBTN": "Profile",
+    "score": "Score",
+    "rank": "Rank",
+    "chat-name": "General Chat",
+    "home-friend-button": "Create Room",
+    "home-ai-button" : "Join the Room"
+}

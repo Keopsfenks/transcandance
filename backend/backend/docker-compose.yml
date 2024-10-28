@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: transcendence
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - mynetwork
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/transcendence
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
